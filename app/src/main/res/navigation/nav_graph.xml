@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <!-- Login Fragment -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.proyecto_g10_cinemalink.ui.fragments.LoginFragment"
+        android:label="Login">
+
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.proyecto_g10_cinemalink.ui.fragments.RegisterFragment"
+        android:label="Register" />
+
+    <!-- Home Fragment -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.proyecto_g10_cinemalink.ui.fragments.HomeFragment"
+        android:label="Películas">
+
+        <action
+            android:id="@+id/action_homeFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Movie Detail Fragment -->
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.example.proyecto_g10_cinemalink.ui.fragments.MovieDetailFragment"
+        android:label="Detalles">
+
+    </fragment>
+
+    <!-- Favorites Fragment -->
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.proyecto_g10_cinemalink.ui.fragments.FavoritesFragment"
+        android:label="Favoritos" />
+
+</navigation>

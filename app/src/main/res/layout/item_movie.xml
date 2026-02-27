@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    style="@style/AppCard">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/ivPoster"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Poster"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Título de la película"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivPoster"
+            app:layout_constraintTop_toTopOf="@id/ivPoster" />
+
+        <TextView
+            android:id="@+id/tvReleaseDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="2024-01-01"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <ImageView
+            android:id="@+id/ivStar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/star_icon"
+            android:layout_marginTop="4dp"
+            android:contentDescription="Rating"
+            app:layout_constraintStart_toStartOf="@id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvReleaseDate" />
+
+        <TextView
+            android:id="@+id/tvRating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="8.5"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivStar"
+            app:layout_constraintTop_toTopOf="@id/ivStar"
+            app:layout_constraintBottom_toBottomOf="@id/ivStar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

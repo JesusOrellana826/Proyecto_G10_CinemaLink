@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivPoster"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Poster"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            style="@style/IconButton"
+            android:layout_margin="16dp"
+            android:src="@drawable/back_icon"
+            android:contentDescription="Volver"
+            android:background="@android:color/white"
+            android:padding="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-30dp"
+            style="@style/AppCard"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:layout_constraintTop_toBottomOf="@id/ivPoster">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Título"
+                    style="@style/SectionTitle" />
+
+                <TextView
+                    android:id="@+id/tvReleaseDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2024"
+                    style="@style/BodyText"
+                    android:layout_marginTop="8dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/star_icon"
+                        android:contentDescription="Rating" />
+
+                    <TextView
+                        android:id="@+id/tvRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8.5"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- SINOPSIS -->
+                <TextView
+                    android:id="@+id/tvOverviewLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sinopsis"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/tvOverview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Descripción de la película..."
+                    style="@style/BodyText"
+                    android:layout_marginTop="8dp" />
+
+                <!-- TRAILER -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tráiler"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="20dp" />
+
+                <ImageView
+                    android:id="@+id/ivTrailerThumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAddFavorite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Agregar a Favoritos"
+                    style="@style/PrimaryButton"
+                    android:layout_marginTop="20dp"
+                    app:icon="@drawable/heart_add"
+                    app:iconGravity="textStart"
+                    app:iconPadding="8dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
