@@ -1,9 +1,42 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Proyecto_G10_CinemaLink" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    <style name="Base.Theme.Proyecto_G10_CinemaLink" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Colores principales -->
+        <item name="colorPrimary">@color/cinema_gold</item>
+        <item name="colorOnPrimary">@color/cinema_black</item>
+        <item name="colorPrimaryContainer">@color/cinema_gold_dark</item>
+        <item name="colorOnPrimaryContainer">@color/cinema_black</item>
+
+        <!-- Superficies -->
+        <item name="colorSurface">@color/cinema_dark</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/cinema_surface</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+
+        <!-- Fondo -->
+        <item name="android:colorBackground">@color/cinema_black</item>
+        <item name="colorOnBackground">@color/text_primary</item>
+
+        <!-- Secundario -->
+        <item name="colorSecondary">@color/cinema_gold_light</item>
+        <item name="colorOnSecondary">@color/cinema_black</item>
+
+        <!-- Error -->
+        <item name="colorError">@color/color_error</item>
+        <item name="colorOnError">@color/white</item>
+
+        <!-- Outline para TextInputLayout -->
+        <item name="colorOutline">@color/cinema_card</item>
+
+        <!-- Chips -->
+        <item name="chipStyle">@style/CinemaChip</item>
+
+        <!-- StatusBar y NavigationBar oscuros -->
+        <item name="android:statusBarColor">@color/cinema_black</item>
+        <item name="android:navigationBarColor">@color/cinema_black</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
     </style>
 
     <style name="Theme.Proyecto_G10_CinemaLink" parent="Base.Theme.Proyecto_G10_CinemaLink" />
+
 </resources>

@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+    <color name="cinema_black">#0D0D0D</color>
+    <color name="cinema_dark">#111827</color>
+    <color name="cinema_surface">#1F2937</color>
+    <color name="cinema_card">#374151</color>
+
+    <color name="cinema_gold">#F59E0B</color>
+    <color name="cinema_gold_dark">#D97706</color>
+    <color name="cinema_gold_light">#FCD34D</color>
+
+    <color name="text_primary">#F9FAFB</color>
+    <color name="text_secondary">#9CA3AF</color>
+    <color name="text_hint">#6B7280</color>
+
+    <color name="color_error">#EF4444</color>
+    <color name="color_success">#10B981</color>
+
+    <color name="scrim">#CC000000</color>
+
 </resources>

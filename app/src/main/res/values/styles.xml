@@ -1,51 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
     <style name="AppToolbar" parent="Widget.MaterialComponents.Toolbar">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">?attr/actionBarSize</item>
-        <item name="android:background">?attr/colorPrimary</item>
-        <item name="titleTextColor">@android:color/white</item>
+        <item name="android:background">@color/cinema_dark</item>
+        <item name="titleTextColor">@color/cinema_gold</item>
+        <item name="android:elevation">8dp</item>
     </style>
 
     <style name="PrimaryButton" parent="Widget.MaterialComponents.Button">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_height">56dp</item>
         <item name="android:textSize">16sp</item>
-        <item name="cornerRadius">8dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/cinema_black</item>
+        <item name="backgroundTint">@color/cinema_gold</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="SecondaryButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/cinema_gold</item>
+        <item name="strokeColor">@color/cinema_gold</item>
+        <item name="cornerRadius">12dp</item>
     </style>
 
     <style name="OutlinedTextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="boxStrokeColor">@color/cinema_gold</item>
+        <item name="hintTextColor">@color/cinema_gold</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="boxBackgroundColor">@color/cinema_surface</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
     </style>
 
     <style name="AppCard" parent="Widget.MaterialComponents.CardView">
-        <item name="cardCornerRadius">12dp</item>
-        <item name="cardElevation">4dp</item>
+        <item name="cardBackgroundColor">@color/cinema_surface</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">6dp</item>
+        <item name="strokeColor">@color/cinema_card</item>
+        <item name="strokeWidth">1dp</item>
     </style>
 
     <style name="TitleText">
         <item name="android:textSize">32sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColor">@color/cinema_gold</item>
+        <item name="android:letterSpacing">0.05</item>
     </style>
 
     <style name="SubtitleText">
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:textColor">@color/text_secondary</item>
     </style>
 
     <style name="SectionTitle">
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColor">@color/text_primary</item>
     </style>
 
     <style name="BodyText">
         <item name="android:textSize">14sp</item>
-        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+    </style>
+
+
+    <style name="CinemaChip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/cinema_surface</item>
+        <item name="checkedIconTint">@color/cinema_black</item>
+        <item name="chipStrokeColor">@color/cinema_gold</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">@color/text_primary</item>
     </style>
 
     <style name="IconButton">

@@ -9,7 +9,7 @@ import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.proyecto_g10_cinemalink.R
 import com.example.proyecto_g10_cinemalink.adapter.MovieAdapter
 import com.example.proyecto_g10_cinemalink.databinding.FragmentHomeBinding
@@ -53,7 +53,7 @@ class HomeFragment : Fragment() {
     private fun setupRecyclerView() {
         movieAdapter = MovieAdapter { navigateToDetail(it) }
         binding.rvMovies.apply {
-            layoutManager = LinearLayoutManager(requireContext())
+            layoutManager = GridLayoutManager(requireContext(), 2)  // ← 2 columnas
             adapter = movieAdapter
         }
     }
@@ -111,7 +111,6 @@ class HomeFragment : Fragment() {
     }
 
     private fun observeViewModel() {
-
         viewModel.movies.observe(viewLifecycleOwner) { movies ->
             movieAdapter.submitList(movies)
             binding.rvMovies.scrollToPosition(0)
